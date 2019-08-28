@@ -24,8 +24,10 @@
   <button color="primary" mat-raised-button>Primary</button>
   <button color="accent" mat-raised-button>Accent</button>
   <button color="warn" mat-raised-button>Warn</button>
+  <button color="thura" mat-raised-button>Thura</button>
   <button mat-raised-button disabled>Disabled</button>
   <a mat-raised-button routerLink=".">Link</a>
+
 </div>
 
 <h3>Stroked Buttons</h3>
@@ -67,6 +69,16 @@
   <button mat-fab disabled>Disabled</button>
   <a mat-fab routerLink=".">Link</a>
 </div>
+
+<h3>MiniFab Buttons</h3>
+<div>
+    <button mat-mini-fab>Basic</button>
+  <button color="primary" mat-mini-fab>Primary</button>
+  <button color="accent" mat-mini-fab>Accent</button>
+  <button color="warn" mat-mini-fab>Warn</button>
+  <button mat-mini-fab disabled>Disabled</button>
+  <a mat-mini-fab routerLink=".">Link</a>
+</div>
 <hr>
 
 <div class="mat-display-4">This is display 4</div>
@@ -91,3 +103,77 @@
 <h4>This is a heading for h4</h4>
 <h5>This is a heading for h5</h5>
 </div>
+
+<hr>
+<div>
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+     <mat-button-toggle value="angular">Angular</mat-button-toggle>
+     <mat-button-toggle value="react">React</mat-button-toggle>
+     <mat-button-toggle value="vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{toggleGroup.value}}
+</div>
+
+<div>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="bold">Bold</mat-button-toggle>
+        <mat-button-toggle value="italic">Italic</mat-button-toggle>
+        <mat-button-toggle value="underline">Underline</mat-button-toggle>
+      </mat-button-toggle-group>
+</div>
+
+<h3>MaterialIcon</h3>
+<div>
+  <mat-icon>history</mat-icon>
+  <mat-icon>build</mat-icon>
+  <mat-icon>delete_outline</mat-icon>
+  <mat-icon>work_outline</mat-icon>
+</div>
+
+<div>
+    <mat-icon color="primary">history</mat-icon>
+    <mat-icon color="primary">build</mat-icon>
+    <mat-icon color="primary">delete_outline</mat-icon>
+    <mat-icon color="primary">work_outline</mat-icon>
+  </div>
+
+  <div>
+      <mat-icon color="warn">history</mat-icon>
+      <mat-icon color="warn">build</mat-icon>
+      <mat-icon color="warn">delete_outline</mat-icon>
+      <mat-icon color="warn">work_outline</mat-icon>
+    </div>
+
+    <h3>Badges</h3>
+    <p>
+      <span [matBadge]="notifications" >Notifications</span>
+    </p>
+    <p>
+        <span matBadge="5" matBadgePosition="below before">Notifications</span>
+    </p>
+    <p>
+        <span matBadge="5" matBadgePosition="below after">Notifications</span>
+    </p>
+    <p>
+        <span matBadge="5" matBadgePosition="below before">Notifications</span>
+    </p>
+    <p>
+        <span matBadge="5" matBadgeSize="small">Notifications</span>
+    </p>
+    <p>
+        <span matBadge="5" matBadgeSize="medium">Notifications</span>
+    </p>
+    <p>
+        <span matBadge="5" matBadgeSize="large">Notifications</span>
+    </p>
+
+    <p>
+        <span matBadge="5" matBadgeColor="thura">Notifications</span>
+      </p>
+      <p>
+          <span matBadge="5" matBadgeColor="accent">Notifications</span>
+        </p>
+        <p>
+            <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Notifications</span>
+          </p>
+

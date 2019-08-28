@@ -1,3 +1,13 @@
 button{
   margin-right: 3rem;
 }
+
+.mat-fab.mat-thura, .mat-flat-button.mat-thura, .mat-mini-fab.mat-thura,
+.mat-raised-button.mat-thura {
+  color: #fff;
+  background-color:rgb(57, 156, 78);
+}
+
+p{
+  margin: 3rem;
+}
