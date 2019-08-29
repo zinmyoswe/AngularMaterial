@@ -20,6 +20,7 @@ span{
   padding-right: 1rem;
 }
 
+/* ----------- sidenav ----------- */
 mat-sidenav-container{
   height: 100%;
 }
@@ -31,5 +32,5 @@ mat-sidenav, mat-sidenav-content{
 mat-sidenav{
   background-color: #007bff;
   width: 200px;
-  color: #fff;
+
 }
