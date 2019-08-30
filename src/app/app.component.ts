@@ -10,10 +10,13 @@ export class AppComponent {
   notifications = '2';
   showSpinner = false;
 
+
   loadData(){
     this.showSpinner = true;
     setTimeout(() => {
       this.showSpinner = false;
     }, 3000);
   }
+
+
 }

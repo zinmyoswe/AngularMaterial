@@ -8,7 +8,7 @@ button{
   background-color:rgb(57, 156, 78);
 }
 
-p{
+.noti{
   margin: 3rem;
 }
 
@@ -34,3 +34,38 @@ mat-sidenav{
   width: 200px;
 
 }
+
+/* ----------- card ----------- */
+.example-card{
+  max-width: 400px;
+}
+
+.example-header-image{
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+/* ----------- grid ----------- */
+mat-grid-tile{
+  background: lightblue;
+}
+
+/* ----------- tabs----------- */
+.example-small-box, .example-large-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-small-box {
+  height: 100px;
+  width: 100px;
+}
+
+.example-large-box {
+  height: 300px;
+  width: 300px;
+}
+

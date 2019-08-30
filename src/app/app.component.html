@@ -145,35 +145,35 @@
     </div>
 
     <h3>Badges</h3>
-    <p>
+    <p class="noti">
       <span [matBadge]="notifications" >Notifications</span>
     </p>
-    <p>
+    <p class="noti">
         <span matBadge="5" matBadgePosition="below before">Notifications</span>
     </p>
-    <p>
+    <p class="noti">
         <span matBadge="5" matBadgePosition="below after">Notifications</span>
     </p>
-    <p>
+    <p class="noti">
         <span matBadge="5" matBadgePosition="below before">Notifications</span>
     </p>
-    <p>
+    <p class="noti">
         <span matBadge="5" matBadgeSize="small">Notifications</span>
     </p>
-    <p>
+    <p class="noti">
         <span matBadge="5" matBadgeSize="medium">Notifications</span>
     </p>
-    <p>
+    <p class="noti">
         <span matBadge="5" matBadgeSize="large">Notifications</span>
     </p>
 
-    <p>
+    <p class="noti">
         <span matBadge="5" matBadgeColor="thura">Notifications</span>
       </p>
-      <p>
+      <p class="noti">
           <span matBadge="5" matBadgeColor="accent">Notifications</span>
         </p>
-        <p>
+        <p class="noti">
             <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Notifications</span>
           </p>
 
@@ -238,6 +238,145 @@
  [matMenuTriggerData]="{name: 'CherryPeach'}"
  [matMenuTriggerFor]="lazyMenu"
  >CherryPeach</button>
+<hr>
 
+<mat-card>Simple card</mat-card>
+ <h3>Card</h3>
+ <mat-card class="example-card">
+   <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+   </mat-card-header>
+   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+   <mat-card-content>
+     <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.</p>
+   </mat-card-content>
+   <mat-card-actions>
+     <button mat-button>LIKE</button>
+     <button mat-button>SHARE</button>
+   </mat-card-actions>
+ </mat-card>
 
+ <hr>
+ <h3>Grid</h3>
+ <mat-grid-list cols="2" rowHeight="2:1">
+   <mat-grid-tile rowspan="2">1</mat-grid-tile>
+   <mat-grid-tile >2</mat-grid-tile>
+   <mat-grid-tile>3</mat-grid-tile>
+   <mat-grid-tile colspan="2">4</mat-grid-tile>
+ </mat-grid-list>
 
+ <br>
+ <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize=
+ "10px">
+    <mat-grid-tile >1</mat-grid-tile>
+    <mat-grid-tile >2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile >4</mat-grid-tile>
+  </mat-grid-list>
+
+  <hr>
+  <h3>Expansion panel</h3>
+  <mat-accordion>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Angular Fundamental
+    </mat-panel-title>
+    <mat-panel-description>
+      Duration : 3 hrs
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>This is the primary content of the panel.</p>
+  <mat-action-row>
+    <button mat-raised-button>Enroll</button>
+  </mat-action-row>
+</mat-expansion-panel>
+
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular Material
+      </mat-panel-title>
+      <mat-panel-description>
+        Duration : 2 hrs
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is the primary content of the panel.</p>
+    <mat-action-row>
+      <button mat-raised-button>Enroll</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<br>
+
+<hr>
+<h3>Tabs</h3>
+<mat-tab-group #tabRef>
+  <mat-tab label="Angular">
+    Angular Content
+    <p>...</p>
+  </mat-tab>
+  <mat-tab label="React">
+      React Content
+      <p>...</p>
+    </mat-tab>
+    <mat-tab label="Vue">
+        Vue Content
+        <p>...</p>
+      </mat-tab>
+</mat-tab-group>
+{{tabRef.selectedIndex}}
+
+<br>
+<mat-tab-group dynamicHeight>
+    <mat-tab label="Short tab">
+      <div class="example-small-box mat-elevation-z4">
+        Small content
+      </div>
+    </mat-tab>
+    <mat-tab label="Long tab">
+      <div class="example-large-box mat-elevation-z4">
+        Large content
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <hr>
+  <h3>Stepper</h3>
+  <mat-horizontal-stepper linear>
+     <mat-step label="Shipping Address" completed=true>
+       <p>Shipping Address Details</p>
+     </mat-step>
+
+      <mat-step label="Billing Address" completed=false optional>
+          <p>Billing Address Details</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </mat-step>
+        <mat-step label="Place Order" completed=false>
+            <p>Order Details</p>
+          </mat-step>
+  </mat-horizontal-stepper>
+
+  <mat-vertical-stepper linear>
+      <mat-step label="Shipping Address" completed=true>
+        <p>Shipping Address Details</p>
+      </mat-step>
+
+       <mat-step label="Billing Address" completed=false optional>
+           <p>Billing Address Details</p>
+           <div>
+             <button mat-button matStepperPrevious>Back</button>
+             <button mat-button matStepperNext>Next</button>
+           </div>
+         </mat-step>
+         <mat-step label="Place Order" completed=false>
+             <p>Order Details</p>
+           </mat-step>
+   </mat-vertical-stepper>
